@@ -8,6 +8,9 @@
 
 SEOTools is a package for [Laravel 5.8+](https://laravel.com/) and [Lumen](https://lumen.laravel.com/) that provides helpers for some common SEO techniques.
 
+# Why this fork?
+The current owner of the package is taking to much time to update it and add essential features to it such as reset images on opengraph and such. Feel free to use this fork, credits goes to the original creator!
+
 > Current Build Status
 
 [![Build Status](https://travis-ci.org/artesaos/seotools.svg)](https://travis-ci.org/artesaos/seotools)
