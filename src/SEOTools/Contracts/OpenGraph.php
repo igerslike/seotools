@@ -97,11 +97,12 @@ interface OpenGraph
      * Add image to properties.
      *
      * @param string $url
-     * @param array  $attributes
+     * @param array $attributes
+     * @param bool $reset
      *
      * @return static
      */
-    public function addImage($url, $attributes = []);
+    public function addImage($url, $attributes = [],$reset = false);
 
     /**
      * Add images to properties.
@@ -111,6 +112,23 @@ interface OpenGraph
      * @return static
      */
     public function addImages(array $urls);
+
+    /**
+     * Reset the images.
+     *
+     * @return OpenGraph
+     */
+    public function resetImages();
+
+    /**
+     * Replace array of images.
+     *
+     * @param string $urls
+     * @param array  $attributes
+     *
+     * @return OpenGraph
+     */
+    public function replaceImages($urls, $attributes = []);
 
     /**
      * Define title property.
