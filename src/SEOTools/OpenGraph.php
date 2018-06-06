@@ -746,6 +746,17 @@ class OpenGraph implements OpenGraphContract
         return $this;
     }
 
+
+    /**
+     * Reset the images added
+     *
+     * @return $this
+     */
+    public function resetImages(){
+        $this->images = [];
+        return $this;
+    }
+
     /**
      * {@inheritdoc}
      */
