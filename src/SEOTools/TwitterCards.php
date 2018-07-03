@@ -171,4 +171,14 @@ class TwitterCards implements TwitterCardsContract
     {
         return $this->addValue('image', $image);
     }
+
+    /**
+     * Reset the images added
+     *
+     * @return $this
+     */
+    public function resetImages(){
+        $this->images = [];
+        return $this;
+    }
 }
