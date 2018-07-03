@@ -64,9 +64,10 @@ class TwitterCards implements TwitterCardsContract
             if (is_array($value)):
                 $this->eachValue($value, $key); else:
                 if (is_numeric($key)):
-                    $key = $prefix.$key; elseif (is_string($prefix)):
+                    //$key = $prefix.$key;
+                elseif (is_string($prefix)):
                     $key = $prefix.':'.$key;
-        endif;
+                endif;
 
         $this->html[] = $this->makeTag($key, $value);
         endif;
