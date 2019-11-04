@@ -1,5 +1,5 @@
 {
-  "name": "artesaos/seotools",
+  "name": "igerslike/seotools",
   "description": "SEO Tools for Laravel and Lumen",
   "keywords": ["laravel", "lumen" ,"seo", "seotools", "webmaster", "metatags", "opengraph", "json-ld"],
   "license": "MIT",
