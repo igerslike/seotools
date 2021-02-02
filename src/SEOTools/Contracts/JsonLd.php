@@ -120,16 +120,16 @@ interface JsonLd
     public function setUrl($url);
 
     /**
-     * @param string|array $image
-     *
+     * @param  string|array  $image
+     * @param  bool  $reset
      * @return static
      */
-    public function addImage($image);
+    public function addImage($image,$reset = false);
 
     /**
-     * @param string|array $images
-     *
+     * @param  string|array  $images
+     * @param  bool  $reset
      * @return static
      */
-    public function setImages($images);
+    public function setImages($images,$reset = false);
 }

@@ -107,11 +107,11 @@ interface OpenGraph
     /**
      * Add images to properties.
      *
-     * @param array $urls
-     *
+     * @param  array  $urls
+     * @param  bool  $reset
      * @return static
      */
-    public function addImages(array $urls);
+    public function addImages(array $urls,$reset = false);
 
     /**
      * Reset the images.

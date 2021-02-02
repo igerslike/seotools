@@ -224,18 +224,21 @@ class JsonLd implements JsonLdContract
     /**
      * {@inheritdoc}
      */
-    public function setImages($images)
+    public function setImages($images,$reset = false)
     {
         $this->images = [];
-
         return $this->addImage($images);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function addImage($image)
+    public function addImage($image,$reset = false)
     {
+        if($reset){
+            $this->images = [];
+        }
+
         if (is_array($image)) {
             $this->images = array_merge($this->images, $image);
         } elseif (is_string($image)) {

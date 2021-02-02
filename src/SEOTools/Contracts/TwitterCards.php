@@ -100,18 +100,18 @@ interface TwitterCards
     public function setUrl($url);
 
     /**
-     * @param string|array $image
-     *
+     * @param  string|array  $image
+     * @param  bool  $reset
      * @return static
      */
-    public function addImage($image);
+    public function addImage($image,$reset = false);
 
     /**
-     * @param string|array $images
-     *
+     * @param  string|array  $images
+     * @param  bool  $reset
      * @return static
      */
-    public function setImages($images);
+    public function setImages($images,$reset = false);
 
     /**
      * @param string|array $image
@@ -119,4 +119,11 @@ interface TwitterCards
      * @return static
      */
     public function setImage($image);
+
+    /**
+     * Reset the images.
+     *
+     * @return OpenGraph
+     */
+    public function resetImages();
 }

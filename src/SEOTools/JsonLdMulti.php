@@ -159,7 +159,7 @@ class JsonLdMulti implements JsonLdMultiContract
     /**
      * {@inheritdoc}
      */
-    public function setImages($images)
+    public function setImages($images,$reset = false)
     {
         $this->list[$this->index]->setImages($images);
 
@@ -169,7 +169,7 @@ class JsonLdMulti implements JsonLdMultiContract
     /**
      * {@inheritdoc}
      */
-    public function addImage($image)
+    public function addImage($image,$reset = false)
     {
         $this->list[$this->index]->addImage($image);
 

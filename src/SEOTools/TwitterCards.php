@@ -143,8 +143,11 @@ class TwitterCards implements TwitterCardsContract
      *
      * @deprecated use setImage($image) instead
      */
-    public function addImage($image)
+    public function addImage($image,$reset = false)
     {
+        if($reset){
+            $this->resetImages();
+        }
         foreach ((array) $image as $url) {
             $this->images[] = $url;
         }
@@ -157,11 +160,11 @@ class TwitterCards implements TwitterCardsContract
      *
      * @deprecated use setImage($image) instead
      */
-    public function setImages($images)
+    public function setImages($images,$reset = false)
     {
         $this->images = [];
 
-        return $this->addImage($images);
+        return $this->addImage($images,$reset);
     }
 
     /**

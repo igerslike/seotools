@@ -713,7 +713,7 @@ class OpenGraph implements OpenGraphContract
     /**
      * {@inheritdoc}
      */
-    public function addImage($source = null, $attributes = [])
+    public function addImage($source = null, $attributes = [],$reset = false)
     {
         $validKeys = [
             'url',
@@ -723,6 +723,10 @@ class OpenGraph implements OpenGraphContract
             'height',
             'alt',
         ];
+
+        if($reset){
+            $this->resetImages();
+        }
 
         if (is_array($source)) {
             $this->images[] = $this->cleanProperties($source, $validKeys);

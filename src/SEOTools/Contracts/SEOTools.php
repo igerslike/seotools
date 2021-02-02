@@ -128,11 +128,11 @@ interface SEOTools
     /**
      * Add one or more images urls.
      *
-     * @param array|string $urls
-     *
+     * @param  array|string  $urls
+     * @param  bool  $reset
      * @return static
      */
-    public function addImages($urls);
+    public function addImages($urls,$reset = false);
 
     /**
      * Get current title from metatags.
