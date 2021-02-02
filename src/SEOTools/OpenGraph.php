@@ -743,10 +743,12 @@ class OpenGraph implements OpenGraphContract
     /**
      * {@inheritdoc}
      */
-    public function addImages(array $urls)
+    public function addImages(array $urls,$reset = true)
     {
+        if($reset){
+            $this->resetImages();
+        }
         array_push($this->images, $urls);
-
         return $this;
     }
 

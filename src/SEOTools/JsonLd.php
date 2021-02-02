@@ -251,8 +251,11 @@ class JsonLd implements JsonLdContract
     /**
      * {@inheritdoc}
      */
-    public function setImage($image)
+    public function setImage($image,$reset = false)
     {
+        if($reset){
+            $this->images = null;
+        }
         $this->images = [$image];
 
         return $this;
