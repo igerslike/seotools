@@ -121,16 +121,6 @@ interface OpenGraph
     public function resetImages();
 
     /**
-     * Replace array of images.
-     *
-     * @param string $urls
-     * @param array  $attributes
-     *
-     * @return OpenGraph
-     */
-    public function replaceImages($urls, $attributes = []);
-
-    /**
      * Define title property.
      *
      * @param string $title
